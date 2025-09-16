@@ -8,22 +8,34 @@ It showcases a **moderate-level framework** using the **Page Object Model (POM)*
 ## 📂 Project Structure
 
 ```
-cypress/
-  e2e/
-    pages/           # Page Object classes
-    tests/           # Test specs (grouped, tagged, parameterized)
-  fixtures/          # Test data (JSON, mock payloads)
-  support/
-    commands.js      # Custom Cypress commands
-    e2e.js           # Global hooks & setup
-  utils/             # Utility helpers & dynamic test data
-  downloads/         # Downloaded files for validation
-  screenshots/       # Auto-captured screenshots on failure
-  videos/            # Auto-recorded videos on test run
-cypress.config.js    # Cypress configuration (v10+)
-package.json         # Project dependencies
-.gitignore           # Ignore files for Git
-README.md            # Project documentation
+project-root/
+│
+├── cypress.config.js          # Cypress configuration (v10+)
+│
+├── cypress/
+│   ├── e2e/                   # Test layer
+│   │   ├── pages/             # Page Object classes (POM design)
+│   │   └── tests/             # Test specs (grouped, tagged, parameterized)
+│   │
+│   ├── fixtures/              # Static test data (JSON, mock payloads, etc.)
+│   │   └── users.json
+│   │
+│   ├── support/               # Cypress support layer
+│   │   ├── commands.js        # Custom Cypress commands
+│   │   └── e2e.js             # Global setup & hooks
+│   │
+│   ├── utils/                 # Utilities & dynamic test data
+│   │   ├── apiHelpers.js
+│   │   └── dataGenerators.js
+│   │
+│   ├── downloads/             # Downloaded files for validation
+│   ├── screenshots/           # Auto-captured screenshots on failure
+│   └── videos/                # Auto-recorded videos of test runs
+│
+├── package.json               # Project dependencies
+├── .gitignore                 # Ignore files for Git
+└── README.md                  # Project documentation
+
 ```
 
 ---
