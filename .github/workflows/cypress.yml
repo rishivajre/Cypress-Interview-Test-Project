@@ -1,14 +1,16 @@
 name: Cypress Tests
 
-#on:
- # push:
-   # branches:
-  #    - master
-  #    - main
- # pull_request:
- #   branches:
-  #    - master
-  #    - main
+# This workflow is documented as an example and will not run automatically.
+# To enable it, uncomment the 'on' block below.
+# on:
+#   push:
+#     branches:
+#       - master
+#       - main
+#   pull_request:
+#     branches:
+#       - master
+#       - main
 
 jobs:
   cypress-run:
