@@ -1,14 +1,14 @@
 name: Cypress Tests
 
-on:
-  push:
-    branches:
-      - master
-      - main
-  pull_request:
-    branches:
-      - master
-      - main
+#on:
+ # push:
+   # branches:
+  #    - master
+  #    - main
+ # pull_request:
+ #   branches:
+  #    - master
+  #    - main
 
 jobs:
   cypress-run:
