@@ -27,3 +27,7 @@ allure-results/
 # Allure report folder
 # The final HTML report, generated from the results.
 allure-report/
+reports/*
+
+# Keep only the sample report
+!reports/allure-sample/
