@@ -40,12 +40,14 @@ project-root/
 ![alt text](image.png)
 ---
 
-## 🚀 Setup & Usage
+## 🚀 Setup & Usage [https://docs.cypress.io/app/get-started/install-cypress]
+
+🌟 Check Requirements: make sure you meet the system requirements including operating system, installation of Node.js and a supported package manager.
 
 1. **Install dependencies**
 
    ```bash
-   npm install
+   npm install cypress --save-dev
    ```
 
 2. **Run tests in interactive mode**
