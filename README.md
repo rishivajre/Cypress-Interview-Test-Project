@@ -1,4 +1,4 @@
-# CypressInterviewProject080925
+# Cypress-Interview-Test-Project
 
 This project is for demonstration purposes during an interview. It showcases a moderate-level Cypress automation framework using the Page Object Model (POM) design pattern for an e-commerce application.
 
