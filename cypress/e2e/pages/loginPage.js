@@ -1,11 +1,11 @@
 // Page Object for Login Page
 class LoginPage {
   visit() {
-    cy.visit('/login');
+    cy.visit('https://www.saucedemo.com/'); // just an example 
   }
 
   enterUsername(username) {
-    cy.get('#username').type(username);
+    cy.get('[data-test="username"]').type(username);
   }
 
   enterPassword(password) {

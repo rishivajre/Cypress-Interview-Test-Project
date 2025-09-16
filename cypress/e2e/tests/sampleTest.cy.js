@@ -1,36 +1,33 @@
-import LoginPage from '../pages/loginPage';
+// Tags: @regression @smoke @sanity
 
-// Example of grouping and tagging using Mocha's describe/it and custom tags
-// Example of parameterization using Cypress's it.each (via cypress-each or similar plugin)
-// For parallel testing, use Cypress Dashboard or CI config (not in test file)
-
-// Tags: @regression @smoke
-
-describe('Login Test - Regression @regression', () => {
+describe('Swag Labs Login Tests', () => {
+  const baseUrl = 'https://www.saucedemo.com/';
   const testUsers = [
-    { username: 'testuser1', password: 'password123' },
-    { username: 'testuser2', password: 'password456' }
+    { username: 'standard_user', password: 'secret_sauce' },
+    // You can add more users like:
+    // { username: 'problem_user', password: 'secret_sauce' },
+    // { username: 'performance_glitch_user', password: 'secret_sauce' }
   ];
 
+  // 🧪 Regression & Smoke Tests
   testUsers.forEach((user) => {
-    it(`should login with valid credentials for ${user.username} @smoke`, () => {
-      const login = new LoginPage();
-      login.visit();
-      login.enterUsername(user.username);
-      login.enterPassword(user.password);
-      login.submit();
-      // Add assertions here
+    it(`should login successfully with valid credentials for ${user.username} @regression @smoke`, () => {
+      cy.visit(baseUrl);
+      cy.get('[data-test="username"]').type(user.username);
+      cy.get('[data-test="password"]').type(user.password);
+      cy.get('[data-test="login-button"]').click();
+
+      // ✅ Assertion: Verify successful login
+      cy.url().should('include', '/inventory.html');
+      cy.get('.inventory_list').should('be.visible');
     });
   });
-});
 
-// Example: Sanity test group
-// Tags: @sanity
-
-describe('Login Page Sanity @sanity', () => {
-  it('should display login form', () => {
-    const login = new LoginPage();
-    login.visit();
-    cy.get('form').should('be.visible');
+  // 🔍 Sanity Test
+  it('should display login form elements @sanity', () => {
+    cy.visit(baseUrl);
+    cy.get('[data-test="username"]').should('be.visible');
+    cy.get('[data-test="password"]').should('be.visible');
+    cy.get('[data-test="login-button"]').should('be.visible');
   });
 });
