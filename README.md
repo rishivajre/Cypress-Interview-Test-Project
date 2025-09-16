@@ -37,7 +37,7 @@ project-root/
 └── README.md                  # Project documentation
 
 ```
-
+![alt text](image.png)
 ---
 
 ## 🚀 Setup & Usage
@@ -85,6 +85,9 @@ This project supports multiple reporting integrations:
 * **Allure reports** (with plugin setup)
 
 Reports are generated after test runs and stored in the `reports/` folder.
+
+Allure Reports can be easily generated if you follow instructions from Official Allure Cypress page:
+https://allurereport.org/docs/cypress/ 
 
 ---
 

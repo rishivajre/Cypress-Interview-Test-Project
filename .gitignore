@@ -1,5 +1,11 @@
 # Cypress recommended .gitignore
+
+# Ignore Node.js dependencies
 node_modules/
+
+# Ignore Cypress-related files
+# Cypress generates videos and screenshots during test runs.
+# These can sometimes capture sensitive information and should be ignored.
 cypress/screenshots/
 cypress/videos/
 cypress/downloads/
@@ -13,3 +19,11 @@ yarn.lock
 
 # VS Code settings
 .vscode/
+
+# Allure results folder
+# Contains the raw data collected during the test run.
+allure-results/
+
+# Allure report folder
+# The final HTML report, generated from the results.
+allure-report/

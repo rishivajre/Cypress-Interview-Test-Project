@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "allure-cypress": "^3.4.1",
     "cypress": "^15.1.0"
   }
 }

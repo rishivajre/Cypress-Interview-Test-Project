@@ -2,6 +2,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import "allure-cypress";
 
 // Prevent Cypress from failing tests on uncaught exceptions
 Cypress.on('uncaught:exception', () => {
