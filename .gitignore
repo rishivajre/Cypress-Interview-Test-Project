@@ -31,3 +31,4 @@ reports/*
 
 # Keep only the sample report
 !reports/allure-sample/
+
